@@ -29,7 +29,6 @@ class ModalTests(TestCase):
         self.assertTrue(user.check_password(password))
 
     def test_user_with_no_email(self):
-        email = ""
         password = "qwerty"
 
         with self.assertRaises(ValueError):
@@ -38,7 +37,6 @@ class ModalTests(TestCase):
             )
 
     def test_is_superuser(self):
-
         user = get_user_model().objects.create_super_user(
             "dummy@gmail.com",
             "test1234"
