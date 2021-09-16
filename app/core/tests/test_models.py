@@ -37,7 +37,7 @@ class ModalTests(TestCase):
             )
 
     def test_is_superuser(self):
-        user = get_user_model().objects.create_super_user(
+        user = get_user_model().objects.create_superuser(
             "dummy@gmail.com",
             "test1234"
         )

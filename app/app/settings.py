@@ -30,6 +30,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'core',
+    'user',
+    'rest_framework',
+    'rest_framework.authtoken',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,7 +56,10 @@ ROOT_URLCONF = 'app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+
+            # os.path(BASE_DIR, "app", "user")
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
